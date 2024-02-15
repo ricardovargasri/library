@@ -3,13 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Library</title>
 </head>
 <body>
-  <div class="bookDetails">
-
-  </div>
-  <button id="add">New book + </button>
+  <section class="form" style="display: none;">
+  
+    <form action="" method="dialog">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+    </div>
+    <div>
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" required>
+    </div>
+    <div>
+      <label for="pages">Pages:</label>
+      <input type="number" id="pages" name="pages" min="1" required>
+    </div>
+    <div>
+      <label for="readed">Read:</label>
+      <input type="checkbox" id="readed" name="readed">
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+    </form>
+  </section>
+  <button id="add-button">New book + </button>
   <script src="app.js"></script>
 </body>
 </html>
