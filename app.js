@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   let formDisplay = document.querySelector('.form');
   let boton = document.querySelector('#add-button');
+  let dialog = document.querySelector('#dialog');
 
+  myLIbrary = [];
 
-  const myLibrary = [];
 
   class Book {
     constructor(title, author, pages, readed) {
@@ -13,24 +14,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
     this.readed = readed;
     };
   };
-  
-  function addBookToLibrary(book, array) {
-  // do stuff here
-    array.push(book)
-  };
+
+  boton.addEventListener('click', ()=>{
+    dialog.show();
+  });
+
+  formDisplay.addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    NewBook = new Book(
+      e.target.title.value,
+      e.target.author.value,
+      e.target.pages.value,
+      e.target.readed.checked
+    );
+    myLIbrary.push(NewBook);
+    console.log(myLIbrary[myLIbrary.length - 1]);
 
 
-  function displayBook(book){
- // do stuff here
-    
-  };
+    dialog.close();
+    e.target.reset();
+  }) 
 
-  function showForm(){
-    boton.addEventListener('click', ()=>{
-      formDisplay.style.display = 'block';
-    })
-  };
-  showForm();
 });
 
 
