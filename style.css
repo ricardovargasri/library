@@ -2,22 +2,70 @@
   margin: 0;
   padding: 0;
 }
+section{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.reading{
+  width: 410px;
+  height: 570px;
+  margin-left: 90px;
+  margin-top: 70px;
+}
 #button-section{
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 8fr 1fr 1fr;
+  height: 100vh;
+  border-right: 1px black solid;
+  background-color: rgba(255,248,242,255);
+}
+.buttons{
+  height: 55px;
+  margin: 15px;
 }
 #add-button{
-  background-color: rgb(156, 156, 152);
+  background-color: rgb(24 192 74);
   padding: 10px;
   border-radius: 15px;
-  width: 100%;
+  width: 90%;
+  color: aliceblue;
+  font-size: 25px;
+  font-family: "Neucha", cursive;
 }
-
+#reset-button{
+  background-color: rgb(255 70 70);
+  color: white;
+  font-size: 23px;
+  width: 90%;
+  border-radius: 10px;
+  font-family: "Neucha", cursive;
+}
 #dialog{
   background-color: rgb(208, 212, 211);
+  margin: 400px; 
+  position: absolute;
+  margin-left: 50%;
+  margin-bottom: 600px;
+}
+.form{
+  height: 300px;
   
 }
-
 #books-container{
-  background-color: blue;
+  display: flex;
+  flex-direction: row;
+}
+
+.book-card{
+  background-color: rgb(115 212 202);
+  height: 145px;
+  width: 200px;
+  margin: 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }

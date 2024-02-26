@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   };
 
   boton.addEventListener('click', ()=>{
-    dialog.show();
+    dialog.showModal();
   });
 
   formDisplay.addEventListener('submit', (e)=>{
