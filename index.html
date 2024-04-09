@@ -1,54 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Library</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Biblioteca</title>
 </head>
 <body>
-  <section>
-    <div id="button-section">
-      <section class="image-section">
-        <img src="/images/read.jpg" alt="reading" class="reading">
-      </section>
-      <button id="add-button" class="buttons">New book + </button>
-      <button id="reset-button" class="buttons" style="display: none;">Recargar pagina</button>
-        </div>
-        
 
-    </div>
 
-    <div id="books-container">
-    
-    </div>
-    
-  </section>
-  <dialog id="dialog">
-    <form action="" method="dialog" class="form">
-      <div>
-      <label for="title">Title:</label>
-      <input type="text" id="title" name="title" required>
-      </div>
-      <div>
-      <label for="author">Author:</label>
-      <input type="text" id="author" name="author" required>
-      </div>
-        <div>
-      <label for="pages">Pages:</label>
-      <input type="number" id="pages" name="pages" min="1" required>
-      </div>
-      <div>
-      <label for="readed">Read:</label>
-      <input type="checkbox" id="readed" name="readed">
-      </div>
-      <div>
-      <button type="submit">Submit</button>
-      </div>
-    </form> 
-</dialog>
-  
+<h2>Añadir un nuevo libro</h2>
+<form id="book-form">
+  <input type="text" id="author" placeholder="Autor" required>
+  <input type="text" id="title" placeholder="Título" required>
+  <input type="number" id="pagesNum" placeholder="Número de páginas" required>
+  <button type="submit" id="boton">Añadir Libro</button>
+</form>
 
-  <script src="app.js"></script>
+<h2>Libros en la Biblioteca</h2>
+<div id="library-container"></div>
+
+<script src="app.js"></script>
 </body>
 </html>
